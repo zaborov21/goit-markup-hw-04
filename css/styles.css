@@ -11,13 +11,22 @@ medium-500, black-900, bolt-700, regular-400,
 */
 
 :root {
-  --main-font: 'Roboto';
-  --secondary-font: 'Raleway';
+  --main-font: "Roboto";
+  --secondary-font: "Raleway";
   --primary-text-color: #212121;
   --accent-color: #2196f3;
+  --hero-btn-color: #188ce8;
   --description-color: #757575;
   --primary-white-color: #ffffff;
+  --bg-footer-hero-color: #2f303a;
+  --header-logo-color: #000000;
+  --border-color: #ececec;
   --filtr-button-color: #f5f4fa;
+  --bg-advantages-color: #f5f4fa;
+  --bg-team-color: #f5f4fa;
+  --social-link-color: #ffffff;
+  --team-link-color: #afb1b8;
+  --clients-color: #afb1b8;
   --card-set-gap: 30px;
 
   /* others */
@@ -112,7 +121,7 @@ address {
 .header-logo {
   margin-right: 93px;
 
-  color: #000000;
+  color: var(--header-logo-color);
 
   text-decoration: none;
   font-family: var(--secondary-font), sans-serif;
@@ -131,10 +140,11 @@ address {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-color: #2f303a;
+  background-color: var(--bg-footer-hero-color);
 }
 .page-footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-logo {
   display: block;
@@ -180,31 +190,27 @@ address {
 }
 .social-container {
   margin-left: 70px;
-  padding-top: 12px;
 }
 .social-container .title {
   margin-bottom: 20px;
 
   color: var(--primary-white-color);
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .social-list {
   display: flex;
 }
 .social-link {
-  display: inline-flex;
-}
-.social-link {
-  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
 
   background-color: rgba(255, 255, 255, 0.1);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 50%;
 }
 .social-link:hover,
@@ -268,18 +274,12 @@ address {
 .icon-email {
   margin-right: 10px;
 
-  width: 16px;
-  height: 12px;
-
-  fill: #757575;
+  fill: currentColor;
 }
 .icon-phone {
   margin-right: 10px;
 
-  width: 10px;
-  height: 16px;
-
-  fill: #757575;
+  fill: currentColor;
 }
 
 .header-contact-link:hover .icon-email,
@@ -314,6 +314,8 @@ address {
 
 /* section hero */
 .hero {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -321,11 +323,16 @@ address {
   height: 600px;
 
   text-align: center;
-  background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/hero/hero-img.jpg');
+  background-color: var(--bg-footer-hero-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero/hero-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .hero .title {
   margin-left: auto;
@@ -360,7 +367,7 @@ address {
 }
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #188ce8;
+  background-color: var(--hero-btn-color);
 }
 
 /* section advantages */
@@ -372,7 +379,7 @@ address {
   padding: 25px 100px;
   margin-bottom: 30px;
 
-  background-color: #f5f4fa;
+  background-color: var(--bg-advantages-color);
   border-radius: 4px;
 }
 .advantages .subtitle {
@@ -410,7 +417,7 @@ address {
 /* section team */
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--bg-team-color);
 
   text-align: center;
 }
@@ -456,21 +463,22 @@ address {
 .team-social-list {
   display: flex;
 
-  padding: 0px 32px 30px 32px;
+  justify-content: center;
 }
 .social-list-item + .social-list-item {
   margin-left: 10px;
 }
+.team .social-list-item {
+  margin-bottom: 30px;
+}
 .team-social-link {
-  display: block;
+  display: flex;
   align-items: center;
-  padding: 12px 12px;
+  justify-content: center;
 
   width: 44px;
   height: 44px;
-
-  background-color: #ffffff;
-  background-size: 20px;
+  color: var(--team-link-color);
   border-radius: 50%;
 }
 .team-social-link:hover,
@@ -481,7 +489,7 @@ address {
 .icon-twitter,
 .icon-facebook,
 .icon-linkedin {
-  fill: #afb1b8;
+  fill: currentColor;
 }
 .team-social-link:hover .icon-instagram,
 .team-social-link:focus .icon-instagram,
@@ -508,12 +516,14 @@ address {
   --items: 6;
 }
 .clients-link {
-  display: inline-flex;
-}
-.clients-link {
-  padding: 15px 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92px;
+  width: 170px;
 
-  border: 1px solid #afb1b8;
+  color: var(--clients-color);
+  border: 1px solid var(--clients-color);
   border-radius: 4px;
 }
 .clients-link:hover {
@@ -525,7 +535,7 @@ address {
 .icon-client-4,
 .icon-client-5,
 .icon-client-6 {
-  fill: #afb1b8;
+  fill: currentColor;
 }
 .clients-link:hover .icon-client-1,
 .clients-link:focus .icon-client-1,
@@ -547,7 +557,7 @@ address {
 /* buttons */
 
 .border-header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-color);
 }
 .button-list {
   display: flex;
@@ -591,17 +601,20 @@ address {
   background-color: var(--primary-white-color);
 }
 .portfolio-card-link {
+  display: block;
+
   text-decoration: none;
 }
-.portfolio-list-item:hover {
+.portfolio-card-link:hover,
+.portfolio-card-link:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-item-border {
   padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
 .portfolio-list-item .title {
   margin-bottom: 4px;
