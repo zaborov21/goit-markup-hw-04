@@ -172,8 +172,7 @@ address {
   margin-top: 9px;
 }
 .footer-email:hover,
-.footer-email:focus
-.footer-tel:hover,
+.footer-email:focus .footer-tel:hover,
 .footer-tel:focus,
 .address-footer:hover,
 .address-footer:focus {
