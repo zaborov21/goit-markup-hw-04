@@ -270,6 +270,14 @@ address {
 
   padding-top: 32px;
   padding-bottom: 32px;
+
+  color: var(--description-color);
+
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 .icon-email {
   margin-right: 10px;
@@ -297,22 +305,12 @@ address {
 .header-contact-link:focus {
   color: var(--accent-color);
 }
-
-.header-contact-link {
-  color: #757575;
-
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
 .current-link {
   color: var(--accent-color);
 }
 
 /* section hero */
+
 .hero {
   margin-left: auto;
   margin-right: auto;
@@ -425,7 +423,7 @@ address {
   --items: 4;
 }
 .team-descr {
-  padding: 30px 0px 16px 0px;
+  padding: 30px 0px 30px 0px;
 }
 .team-list-item {
   background-color: var(--primary-white-color);
@@ -462,14 +460,11 @@ address {
 }
 .team-social-list {
   display: flex;
-
   justify-content: center;
+  margin-top: 16px;
 }
 .social-list-item + .social-list-item {
   margin-left: 10px;
-}
-.team .social-list-item {
-  margin-bottom: 30px;
 }
 .team-social-link {
   display: flex;
@@ -484,22 +479,10 @@ address {
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: var(--accent-color);
+  color: var(--primary-white-color);
 }
-.icon-instagram,
-.icon-twitter,
-.icon-facebook,
-.icon-linkedin {
+.icons {
   fill: currentColor;
-}
-.team-social-link:hover .icon-instagram,
-.team-social-link:focus .icon-instagram,
-.team-social-link:hover .icon-twitter,
-.team-social-link:focus .icon-twitter,
-.team-social-link:hover .icon-facebook,
-.team-social-link:focus .icon-facebook,
-.team-social-link:hover .icon-linkedin,
-.team-social-link:focus .icon-linkedin {
-  fill: var(--primary-white-color);
 }
 
 /* Clients */
@@ -526,29 +509,15 @@ address {
   border: 1px solid var(--clients-color);
   border-radius: 4px;
 }
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--accent-color);
 }
-.icon-client-1,
-.icon-client-2,
-.icon-client-3,
-.icon-client-4,
-.icon-client-5,
-.icon-client-6 {
+.client-icon {
   fill: currentColor;
 }
-.clients-link:hover .icon-client-1,
-.clients-link:focus .icon-client-1,
-.clients-link:hover .icon-client-2,
-.clients-link:focus .icon-client-2,
-.clients-link:hover .icon-client-3,
-.clients-link:focus .icon-client-3,
-.clients-link:hover .icon-client-4,
-.clients-link:focus .icon-client-4,
-.clients-link:hover .icon-client-5,
-.clients-link:focus .icon-client-5,
-.clients-link:hover .icon-client-6,
-.clients-link:focus .icon-client-6 {
+.clients-link:hover .client-icon,
+.clients-link:focus .client-icon {
   fill: var(--accent-color);
 }
 
@@ -606,7 +575,7 @@ address {
   text-decoration: none;
 }
 .portfolio-card-link:hover,
-.portfolio-card-link:focus{
+.portfolio-card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
