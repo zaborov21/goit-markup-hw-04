@@ -217,16 +217,7 @@ address {
 .social-link:focus {
   background-color: var(--accent-color);
 }
-.footer-icon-instagram {
-  fill: var(--primary-white-color);
-}
-.footer-icon-twitter {
-  fill: var(--primary-white-color);
-}
-.footer-icon-facebook {
-  fill: var(--primary-white-color);
-}
-.footer-icon-linkedin {
+.footer-icons {
   fill: var(--primary-white-color);
 }
 
